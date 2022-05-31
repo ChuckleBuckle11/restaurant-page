@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch"
-    },
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChuckleBuckle11/restaurant-page.git"
@@ -20,6 +21,7 @@
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   }
 }
