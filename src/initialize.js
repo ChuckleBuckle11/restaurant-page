@@ -3,9 +3,8 @@ import loadHome from "./home";
 
 
 function initializeWebsite() {
-  
+
   const content = document.getElementById("content");
-  console.log(content);
 
   content.appendChild(createHeader());
   // content.appendChild(createMain());
@@ -28,6 +27,7 @@ function createHeader() {
 
   header.appendChild(restaurantName);
   header.appendChild(createNav());
+  
 
   return header;
 }
@@ -69,6 +69,12 @@ function createNav(){
   return nav;
 }
 
+function createMain(){
+  const main = document.createElement('div');
+  main.classList.add('main');
+
+  return main;
+}
 
 
 export default initializeWebsite;

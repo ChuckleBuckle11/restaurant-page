@@ -1,6 +1,6 @@
 import initializeWebsite from "./initialize";
+console.log('HeRE')
 // Initializes page
-console.log("Test");
 initializeWebsite();
 
 
