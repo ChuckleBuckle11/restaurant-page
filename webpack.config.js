@@ -14,7 +14,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Restaurant Page',
       template: "./src/template.html",
-      inject: false,
     }),
   ],
   output: {

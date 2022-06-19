@@ -7,8 +7,8 @@ function initializeWebsite() {
   const content = document.getElementById("content");
 
   content.appendChild(createHeader());
-  // content.appendChild(createMain());
-  // content.appendChild(createFooter());
+  content.appendChild(createMain());
+  content.appendChild(createFooter());
 
   // loadHome();
 }
@@ -69,11 +69,35 @@ function createNav(){
   return nav;
 }
 
-function createMain(){
-  const main = document.createElement('div');
-  main.classList.add('main');
 
+// Creates the Main section
+function createMain(){
+  const main = document.createElement('main');
+  main.classList.add('main');
+  main.setAttribute("id","main");
   return main;
+}
+
+// Creates the Footer section
+function createFooter(){
+  const footer = document.createElement('footer');
+  main.classList.add('footer');
+  main.setAttribute("id","footer");
+
+  const copyright = document.createElement("p");
+  copyright.textContent = `Copyright © ${new Date().getFullYear()} chucklebuckle`;
+
+  const githubLink = document.createElement("a");
+  githubLink.href = "https://github.com/chucklebuckle11";
+
+  const githubIcon = document.createElement("i");
+  githubIcon.classList.add("fab");
+  githubIcon.classList.add("fa-github");
+
+  githubLink.appendChild(githubIcon);
+  footer.appendChild(copyright);
+  footer.appendChild(githubLink);
+  return footer;
 }
 
 
