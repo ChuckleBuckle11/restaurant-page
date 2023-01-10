@@ -1,4 +1,4 @@
-import loadPage from displayController.js
+import loadPage from displayController
 
 
 init();

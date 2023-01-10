@@ -3,6 +3,11 @@ function createHeader(id){
     header.setAttribute('id',id);
 
     const logo = document.createElement('header');
+
+
+
+
+    
     console.log(logo)
     logo.setAttribute('src',"./logo.png");
     logo.setAttribute('alt',"Logo");
