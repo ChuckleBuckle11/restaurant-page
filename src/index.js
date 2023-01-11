@@ -5,5 +5,5 @@ init();
 
 function init(){
     loadPage();
-
+    loadHome();
 }

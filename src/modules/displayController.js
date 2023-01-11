@@ -29,7 +29,6 @@ function createNav(id){
     nav.appendChild(homeBtn);
     nav.appendChild(menuBtn);
     nav.appendChild(contactBtn);
-    console
     return nav;
 }
 
@@ -55,7 +54,6 @@ function createFooter(id){
 
 function loadPage(){
     const content = document.getElementById(`content`);
-    console.log(content)
     // creates header
     const header = createHeader('header');
     content.appendChild(header);
