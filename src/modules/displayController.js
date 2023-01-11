@@ -44,6 +44,33 @@ function createMain(id){
 function createFooter(id){
     const footer = document.createElement('footer');
     footer.id = id;
+
+
+    const footerLeft = document.createElement('div');
+    footerLeft.id = "footerLeft";
+
+    const footerText = document.createElement('div');
+    footerText.textContent = "Copyrights © 2022 All Rights Reserved by Casamari.";
+
+    const footerLink = document.createElement('a');
+    footerLink.text = "Privacy Policy";
+
+    footerLeft.appendChild(footerText);
+    footerLeft.appendChild(footerLink);
+
+    const footerRight = document.createElement('div');
+    footerRight.id = 'footerRight';
+    const facebookSVG = document.createElement('img');
+    facebookSVG.setAttribute('src','./facebook.svg');
+    facebookSVG.classList.add('svg');
+    const instagramSVG = document.createElement('img');
+    instagramSVG.setAttribute('src','./instagram.svg');
+    instagramSVG.classList.add('svg');
+    footerRight.appendChild(facebookSVG);
+    footerRight.appendChild(instagramSVG);
+
+    footer.appendChild(footerLeft);
+    footer.appendChild(footerRight);
     return footer;
 }
 

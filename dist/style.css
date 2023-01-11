@@ -18,18 +18,19 @@ body {
 /* Header */
 #header{
     background-color: black;
-    flex:0.15;
+    flex:1;
     width: 100%;
     
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:20px;
 }
 
 #logo{
-    max-width: 10%;
-    height: 40%;
+    height: 5em;
+    margin-top: 20px;
 }
 
 nav{
@@ -43,6 +44,9 @@ nav{
     width:20%;
     background-color: black;
     color: white;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 2px;
+    font-size: 18px;
 }
 
 
@@ -50,7 +54,7 @@ nav{
 main{
     background-color: rgb(255, 255, 255);
     width: 100%;
-    flex:1;
+    height: 100%;
     display:flex;
     flex-direction: column;
 }
@@ -65,8 +69,10 @@ main{
 }
 
 #main-image{
-    height: 80vh;
-    margin-left: 10vh;
+    height: 50rem;
+    margin: 10vh;
+    box-shadow: 10px 10px 5px #ccc;
+
 }
 
 
@@ -81,15 +87,31 @@ main{
 }
 #homeContainerHeading{
     margin-top: 0px;
+    font-size: 48px;
 }
+
 #homeContainerText{
-    
     flex:1;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
 
 /* Footer */
 footer {
     background-color: black;
-    flex:0.25;
+    height:10vh;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.svg{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(325deg) brightness(104%) contrast(105%);
+}
+
+#footerRight{
+   display: flex;
+   gap:20px;
 }
