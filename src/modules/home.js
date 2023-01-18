@@ -43,6 +43,8 @@ function loadHome(){
     createImage();
     createHomeText();
 
+    console.log("load home")
+
 }
 
 
