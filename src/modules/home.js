@@ -12,7 +12,7 @@ function createImage(){
     const image = document.createElement('img');
     image.classList.add('image');
     image.setAttribute('id','main-image');
-    image.setAttribute('src','./putanesca-12.jpg')
+    image.setAttribute('src','./img/putanesca-12.jpg')
 
     home.appendChild(image);
 }

@@ -1,5 +1,6 @@
 import loadPage from "./modules/displayController.js";
 import loadHome from "./modules/home.js";
+import loadMenu from "./modules/menu.js";
 
 init();
 
@@ -7,7 +8,6 @@ function init(){
     loadPage();
     loadHome();
     addNavFunctions();
-    console.log("test")
 }
 
 
@@ -16,9 +16,8 @@ function addNavFunctions(){
     const menuButton = document.getElementById("Menu")
     const contactButton = document.getElementById("Contact")
 
-    console.log("test")
 
-    homeButton.addEventListener('click', loadHome());
-    menuButton.addEventListener('click', console.log("LOAD MENU"));
-    contactButton.addEventListener('click', console.log("LOAD CONTACTS"));
+    homeButton.addEventListener('click', loadHome);
+    menuButton.addEventListener('click', loadMenu);
+    contactButton.addEventListener('click', () => {console.log("LOAD CONTACTS")} );
 }
