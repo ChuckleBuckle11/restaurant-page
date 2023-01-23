@@ -9,12 +9,26 @@ function createMenu(){
     // creates Menu div
     const menu  = document.createElement('div');
     menu.classList.add("menu");
-    menu.setAttribute('id','menu');
 
     menu.appendChild
     (createMenuItem(
         "Carbonara",
-        "Cream, Parmesan, Bacon, Italian Herbs"
+        "Cream | Parmesan | Bacon | Italian Herbs"
+    ));
+    menu.appendChild
+    (createMenuItem(
+        "Risottocacio Pepee Oro",
+        "Carnaroli Rice | Pecorino and Pepper | Gold Dust"
+    ));
+    menu.appendChild
+    (createMenuItem(
+        "Risotto Porcini",
+        "CarnaroliRice | Porcini Mushrooms | Parmesan Cream"
+    ));
+    menu.appendChild
+    (createMenuItem(
+        "Pappardelle All'Anatra",
+        "Duck Ragu | Spring Mushrooms | Smoked Scamorza Cream"
     ));
     
     return menu;
@@ -35,11 +49,15 @@ function createMenuItem(name, description){
     foodDescription.classList.add('food-description')
     foodDescription.textContent = description;
 
+    const foodImageContainer = document.createElement('div');
+    foodImageContainer.classList.add('image-container');
     const foodImage = document.createElement('img');
     foodImage.classList.add('food-image')
-    foodImage.src = `./img/${name.toLowerCase()}.png`;
+    foodImage.src = `./img/${name.toLowerCase()}.jpg`;
 
-    menuItem.appendChild(foodImage);
+    foodImageContainer.appendChild(foodImage);
+
+    menuItem.appendChild(foodImageContainer);
     menuItem.appendChild(foodName);
     menuItem.appendChild(foodDescription);
 

@@ -102,6 +102,45 @@ main{
 }
 
 
+/* Menu */
+.menu{
+    display:inline-grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 100px;
+
+    gap: 50px;
+}
+
+.menu-item{
+    margin:0px;
+    padding:0px;
+
+    justify-self: center;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width:30vw;
+}
+
+.image-container > img{
+    object-fit: cover;
+    max-width: 100%;
+    height:auto;
+
+}
+
+.menu-item > * {
+    margin:0px;
+    padding:0px;
+}
+
+
+
+
+
+
 /* Footer */
 footer {
     background-color: black;
