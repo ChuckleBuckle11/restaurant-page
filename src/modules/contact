@@ -1,0 +1,39 @@
+import setActiveButton from "./setActiveButton";
+
+
+
+function loadContacts(){
+    const main = document.getElementById("main");
+    main.textContent = "";
+    main.appendChild(createContacts());
+    setActiveButton('Contact');
+}
+
+function createContacts(){
+    // creates Contact div
+    const contact  = document.createElement('div');
+    contact.classList.add("contact");
+
+    contact.appendChild(
+        createContactElement('Title','Casamari Italian Restaurant')
+    )
+
+    const address = document.createElement('address');
+    address.innerHTML = "Lot A-0G-01, Block A, No. 2, Jalan Kiara<br>"+
+    "Plaza Mont Kiara<br>"+ 
+    "50480 Kuala Lumpur.";
+
+    contact.appendChild(address);
+
+    return contact;
+}
+
+function createContactElement(field, text){
+    const textContainer = document.createElement('div');
+    textContainer.textContent = text;
+    textContainer.classList.add(field);
+    textContainer.id = field;
+    return textContainer;
+}
+
+export default loadContacts;

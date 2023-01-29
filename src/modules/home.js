@@ -1,5 +1,8 @@
+import setActiveButton from "./setActiveButton";
+
 function createHomeScreen(){
     const main = document.getElementById('main');
+    main.textContent = "";
     const home = document.createElement('home');
     home.id = "home";
     main.appendChild(home);
@@ -43,6 +46,7 @@ function loadHome(){
     createImage();
     createHomeText();
 
+    setActiveButton('Home');
     console.log("load home")
 
 }

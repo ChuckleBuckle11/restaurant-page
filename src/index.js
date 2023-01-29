@@ -1,6 +1,7 @@
 import loadPage from "./modules/displayController.js";
 import loadHome from "./modules/home.js";
 import loadMenu from "./modules/menu.js";
+import loadContacts from "./modules/contact";
 
 init();
 
@@ -19,5 +20,5 @@ function addNavFunctions(){
 
     homeButton.addEventListener('click', loadHome);
     menuButton.addEventListener('click', loadMenu);
-    contactButton.addEventListener('click', () => {console.log("LOAD CONTACTS")} );
+    contactButton.addEventListener('click', loadContacts);
 }

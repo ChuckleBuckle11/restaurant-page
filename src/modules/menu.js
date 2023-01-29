@@ -1,7 +1,11 @@
+import setActiveButton from "./setActiveButton";
+
+
 function loadMenu(){
     const main = document.getElementById("main");
     main.textContent = "";
     main.appendChild(createMenu());
+    setActiveButton('Menu');
 }
 
 

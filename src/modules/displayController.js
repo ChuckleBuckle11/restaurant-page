@@ -75,10 +75,6 @@ function createFooter(id){
 }
 
 
-
-
-
-
 function loadPage(){
     const content = document.getElementById(`content`);
     // creates header
