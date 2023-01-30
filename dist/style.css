@@ -1,9 +1,14 @@
+html {
+    font-family: "Times New Roman", Times, serif;
+}
+
 body { 
     margin:0;
     min-height: 100vh;
     
     display:flex;
     flex-direction: column;
+    font-family: "Times New Roman", Times, serif;
 }
 
 #content{
@@ -67,10 +72,9 @@ main{
 #home{
     flex:1;
     display:flex;
-
     align-items: center;
-    
     gap:100px;
+    animation: fadeIn 1.5s
 }
 
 #main-image{
@@ -109,6 +113,7 @@ main{
     padding: 50px 100px;
 
     gap: 50px;
+    animation: fadeIn 1.5s;
 }
 
 .menu-item{
@@ -137,9 +142,49 @@ main{
 }
 
 
+/* Contact */
+.contact{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    animation: fadeIn 1.5s;
+}
+
+#contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+#contact-container>div{
+    font-family: "Times New Roman", Times, serif;
+}
+
+#contact-title{
+    font-size: 32px;
+}
+
+#contact-address{
+    font-size: 18px;
+}
 
 
+.phone-container{
+    display: flex;
+}
 
+.phone-container>img{
+    height:1em;
+}
+
+.email-container{
+    display:flex;
+}
+
+.email-container>img{
+    height:1em;
+}
 
 /* Footer */
 footer {
@@ -149,6 +194,7 @@ footer {
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-shrink: 0;
 }
 
 .svg{
@@ -159,3 +205,14 @@ footer {
    display: flex;
    gap:20px;
 }
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }

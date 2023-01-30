@@ -11,19 +11,54 @@ function loadContacts(){
 
 function createContacts(){
     // creates Contact div
-    const contact  = document.createElement('div');
+    const contact = document.createElement('div');
     contact.classList.add("contact");
+    const contactContainer = document.createElement('div');
+    contactContainer.id = "contact-container";
 
-    contact.appendChild(
-        createContactElement('Title','Casamari Italian Restaurant')
-    )
+    
+    const title = document.createElement(`div`);
+    title.textContent = "Casamari Italian Restaurant";
+    title.id = "contact-title";
 
     const address = document.createElement('address');
     address.innerHTML = "Lot A-0G-01, Block A, No. 2, Jalan Kiara<br>"+
     "Plaza Mont Kiara<br>"+ 
     "50480 Kuala Lumpur.";
+    address.id = "contact-address";
 
-    contact.appendChild(address);
+
+
+    // container for phoneNumber and svg
+    const phoneContainer = document.createElement('div');
+    phoneContainer.classList.add("phone-container");
+    const phoneSVG = document.createElement('img');
+    phoneSVG.src = "./img/phone.svg";
+    const phoneNumber = document.createElement('div');
+    phoneNumber.textContent = ": 01-2345 6789";
+    phoneNumber.id = "contact-phoneNumber";
+
+    phoneContainer.appendChild(phoneSVG);
+    phoneContainer.appendChild((phoneNumber))
+
+    // container for email
+    const emailContainer = document.createElement('div');
+    emailContainer.classList.add('email-container');
+    const emailSVG = document.createElement('img');
+    emailSVG.src = "./img/mail.svg";
+    const email = document.createElement('address');
+    email.textContent = `: casamari@gmail.com`;
+    email.id = "contact-email";
+
+    emailContainer.appendChild(emailSVG);
+    emailContainer.appendChild(email);
+
+    contactContainer.appendChild(title);
+    contactContainer.appendChild(address);
+    contactContainer.appendChild(phoneContainer);
+    contactContainer.appendChild(emailContainer);
+    
+    contact.appendChild(contactContainer);
 
     return contact;
 }
