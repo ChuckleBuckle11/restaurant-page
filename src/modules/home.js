@@ -10,14 +10,17 @@ function createHomeScreen(){
 
 function createImage(){
     const home = document.getElementById('home');
+    const imgContainer = document.createElement(`div`);
+    imgContainer.classList.add('image-container');
 
     //creates image
     const image = document.createElement('img');
     image.classList.add('image');
     image.setAttribute('id','main-image');
-    image.setAttribute('src','./img/putanesca-12.jpg')
+    image.setAttribute('src','./img/putanesca-12.jpg');
 
-    home.appendChild(image);
+    imgContainer.appendChild(image);
+    home.appendChild(imgContainer);
 }
 
 function createHomeText(){
@@ -47,8 +50,6 @@ function loadHome(){
     createHomeText();
 
     setActiveButton('Home');
-    console.log("load home")
-
 }
 
 

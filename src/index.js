@@ -22,3 +22,4 @@ function addNavFunctions(){
     menuButton.addEventListener('click', loadMenu);
     contactButton.addEventListener('click', loadContacts);
 }
+

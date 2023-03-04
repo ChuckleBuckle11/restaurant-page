@@ -10,9 +10,6 @@ function setActiveButton(button){
 
     // Disables the button for the current page
     const activebutton = document.getElementById(button);
-    console.log(`Disabled button is ${button}`)
-    console.log(activebutton);
-
     activebutton.disabled = true;
 }
 

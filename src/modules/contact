@@ -1,5 +1,5 @@
 import setActiveButton from "./setActiveButton";
-
+// api key AIzaSyBQyYKaElXAWsPH2vtr0vSWSlyuRI1egDs
 
 
 function loadContacts(){
@@ -16,7 +16,13 @@ function createContacts(){
     const contactContainer = document.createElement('div');
     contactContainer.id = "contact-container";
 
-    
+    //creates Google map embed
+    const googleEmbed = document.createElement('div');
+    googleEmbed.id = 'map';
+
+    const contactDetails = document.createElement('div');
+    contactDetails.id = 'contact-details';
+
     const title = document.createElement(`div`);
     title.textContent = "Casamari Italian Restaurant";
     title.id = "contact-title";
@@ -53,22 +59,44 @@ function createContacts(){
     emailContainer.appendChild(emailSVG);
     emailContainer.appendChild(email);
 
-    contactContainer.appendChild(title);
-    contactContainer.appendChild(address);
-    contactContainer.appendChild(phoneContainer);
-    contactContainer.appendChild(emailContainer);
+    contactDetails.appendChild(title);
+    contactDetails.appendChild(address);
+    contactDetails.appendChild(phoneContainer);
+    contactDetails.appendChild(emailContainer);
+
+    contactContainer.appendChild(googleEmbed);
+    contactContainer.appendChild(contactDetails);
+    
     
     contact.appendChild(contactContainer);
 
-    return contact;
+
+  // GOOGLE EMBED
+  // Create the script tag, set the appropriate attributes
+  var script = document.createElement('script');
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBQyYKaElXAWsPH2vtr0vSWSlyuRI1egDs&callback=initMap';
+  script.async = true;
+  let map;
+  // Attach your callback function to the `window` object
+  window.initMap = function () {
+    // JS API is loaded and available
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 3.165852409287279, lng: 101.65196843832469 },
+      zoom: 15,
+    });
+
+    const marker = new google.maps.Marker({
+      position: { lat: 3.165852409287279, lng: 101.65196843832469 },
+      map: map,
+      title: "Casamari",
+    });
+    marker.setTitle('new title');
+  };
+
+  // Append the 'script' element to 'head'
+  document.head.appendChild(script);
+  return contact;
 }
 
-function createContactElement(field, text){
-    const textContainer = document.createElement('div');
-    textContainer.textContent = text;
-    textContainer.classList.add(field);
-    textContainer.id = field;
-    return textContainer;
-}
 
 export default loadContacts;

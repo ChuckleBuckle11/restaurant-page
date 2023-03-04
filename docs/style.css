@@ -67,6 +67,11 @@ main{
     display:flex;
     flex-direction: column;
     flex:1;
+    
+}
+
+main>*{
+    animation: fadeIn 1.5s;
 }
 
 #home{
@@ -74,34 +79,40 @@ main{
     display:flex;
     align-items: center;
     gap:100px;
-    animation: fadeIn 1.5s
 }
 
 #main-image{
-    height: 50%;
-    margin: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 20vh;
     box-shadow: 10px 10px 5px #ccc;
+
+    min-height: 0;
+    max-width: 50%;
+    max-height: 50%;
 
 }
 
 
 #homeContainer{
     height:60vh;
+    --h: 60vh;
     width: 50vh;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    
-
 }
 #homeContainerHeading{
     margin-top: 0px;
-    font-size: 48px;
+    /* font-size: 48px; */
+    font-size: calc(var(--h) / 15);
 }
 
 #homeContainerText{
     flex:1;
-    font-size: 20px;
+    /* font-size: 20px; */
+
+    font-size: calc(var(--h) / 30);
     letter-spacing: 2px;
 }
 
@@ -113,7 +124,6 @@ main{
     padding: 50px 100px;
 
     gap: 50px;
-    animation: fadeIn 1.5s;
 }
 
 .menu-item{
@@ -149,14 +159,25 @@ main{
     flex-direction: column;
     align-items: center;
     padding-top: 5%;
-    animation: fadeIn 1.5s;
 }
+
 
 #contact-container{
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    gap: 5em;
 }
+
+#map{
+    width: 40vh;
+    height: 40vh;
+}
+
+#contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #contact-container>div{
     font-family: "Times New Roman", Times, serif;
 }
